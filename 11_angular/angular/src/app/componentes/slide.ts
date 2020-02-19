@@ -24,7 +24,8 @@ export class SlideComponente{
         this._ServicioSlide.tomarJsonSlide().subscribe(
             resultado => {
                 this.slideJson = resultado;
-                console.log("this.slideJson", this.slideJson[0]["titulo"]);
+                // console.log("this.slideJson", this.slideJson[0]["titulo"]);
+                console.log("this.slideJson", this.slideJson[0].titulo);
             },
             
             error => {

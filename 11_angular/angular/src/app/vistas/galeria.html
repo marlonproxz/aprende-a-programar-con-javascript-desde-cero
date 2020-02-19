@@ -3,10 +3,12 @@
     <hr>
 </h1>
 
-<div id="galeria" class="row">
+<div id="galeria" class="row" *ngIf="galeriaJson">
     <ul>
-        <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12"><img src="assets/img/galeria/01.jpg" alt=""></li>
-        <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12"><img src="assets/img/galeria/02.jpg" alt=""></li>
+        <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12" *ngFor="let galeria of galeriaJson">
+            <img src="{{galeria.foto}}" alt="">
+        </li>
+        <!-- <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12"><img src="assets/img/galeria/02.jpg" alt=""></li>
         <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12"><img src="assets/img/galeria/03.jpg" alt=""></li>
         <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12"><img src="assets/img/galeria/04.jpg" alt=""></li>
         <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12"><img src="assets/img/galeria/05.jpg" alt=""></li>
@@ -16,6 +18,8 @@
         <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12"><img src="assets/img/galeria/03.jpg" alt=""></li>
         <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12"><img src="assets/img/galeria/04.jpg" alt=""></li>
         <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12"><img src="assets/img/galeria/05.jpg" alt=""></li>
-        <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12"><img src="assets/img/galeria/06.jpg" alt=""></li>
+        <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12"><img src="assets/img/galeria/06.jpg" alt=""></li> -->
     </ul>
 </div>
+
+<span *ngIf="!galeriaJson">Cargando galería...</span>
